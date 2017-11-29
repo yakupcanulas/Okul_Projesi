@@ -1,0 +1,13 @@
+﻿@using MVCCodeFirst.Models
+@model Egitmen
+
+@if(ViewBag.Hata != null)
+{
+    <p>@ViewBag.Hata</p>
+} else if(Model!=null)
+{
+    <b>@Html.DisplayNameFor(x=>x.AdSoyad) :</b> @Model.AdSoyad
+    <br/>
+    <b>@Html.DisplayNameFor(x => x.DogumTarihi) :</b> @Model.DogumTarihi
+}
+

@@ -1,0 +1,8 @@
+﻿@using MVCCodeFirst.Models
+@model Ist
+
+<b>Eğitmen sayısı: </b> @Model.Sayi
+<h1>Son eklenen 3 öğrenci</h1>
+@foreach (var item in Model.Ogrenciler){
+    @item.AdSoyad <br/>
+}

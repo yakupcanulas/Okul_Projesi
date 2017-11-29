@@ -1,0 +1,39 @@
+﻿@model List<MVCCodeFirst.Models.Egitmen>
+<h1>Tüm Eğitmenler</h1>
+@*
+    <div class="satir">
+        <span class="adsoyad">Erkan Hoyman</span>
+        <span class="tarih">05.05.1982</span>
+    </div>
+
+    <div class="satir">
+        <span class="adsoyad">Turgay Kaya</span>
+        <span class="tarih">05.05.1982</span>
+    </div>
+    *@
+
+<style>
+    .satir{ padding: 20px; border-bottom: 1px solid black;}
+    .adsoyad, .tarih {display:inline-block; width:150px;}
+</style>
+
+@*
+    <div class="satir">
+        <span class="adsoyad">Ad Soyad</span>
+        <span class="tarih">Doğum Tarihi</span>
+    </div>
+*@
+
+<div class="satir">
+    <span class="adsoyad">@Html.DisplayNameFor(x=>x[0].AdSoyad)</span>
+    <span class="tarih">@Html.DisplayNameFor(x => x[0].DogumTarihi)</span>
+</div>
+
+
+@foreach (var item in Model)
+{
+    <div class="satir">
+        <span class="adsoyad">@item.AdSoyad</span>
+        <span class="tarih">@item.DogumTarihi.Value.ToShortDateString()</span>
+    </div>
+}

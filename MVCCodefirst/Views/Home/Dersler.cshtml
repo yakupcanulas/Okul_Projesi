@@ -1,0 +1,15 @@
+﻿@using MVCCodeFirst.Models
+@model IEnumerable<Ders>
+
+<h1>Tüm dersler</h1>
+
+<ul>
+    @if (Model == null || Model.Count()==0)
+    {
+        <text>Ders bulunamadı</text>
+    }
+    @foreach (var ders in Model)
+    {
+        <li>@ders.DersAdi</li>
+    }
+</ul>

@@ -1,0 +1,21 @@
+﻿@using MVCCodeFirst.Models
+@model List<Ogrenci>
+<h1>Tüm Öğrenciler</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Öğrenci No</th>
+            <th>Ad Soyad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ogrenci in Model)
+        {
+            <tr>
+                <td>@ogrenci.OgrenciID</td>
+                <td>@ogrenci.AdSoyad</td>
+            </tr>
+        }
+    </tbody>
+</table>
